@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Mcard from '../Mcard/Mcard';
 import Pagination from '../pagination/pagination';
-import './cards.css';
+// import './cards.css';
 
 export default function Cards({ movies, totalPages, setTotalPages, setCurrentPage, currentPage }) {
   const [originalMovies, setOriginalMovies] = useState([]);
@@ -31,11 +31,12 @@ export default function Cards({ movies, totalPages, setTotalPages, setCurrentPag
 
   return (
     <>
-      <div className="cards-container">
-        {displayedMovies.map(movie => (
+      <div className="container-fluid ms-0 px-2 me-0 d-flex justify-content-center row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-4 gy-5 mt-5">
+      {displayedMovies.map(movie => (
           <Mcard key={movie.id} movie={movie} />
         ))}
       </div>
+
       <Pagination 
         totalPages={totalPages} 
         currentPage={currentPage} 

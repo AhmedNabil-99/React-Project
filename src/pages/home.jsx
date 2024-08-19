@@ -1,15 +1,23 @@
 import Welcom from "../components/welcoming/welcom"
+import { useState } from "react";
+import Cards from "../components/cards/cards";
 import { axiosInstance } from "../netwotking/axiosinstance"
 
 export default function Home() {
-    axiosInstance.get('discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc')
-    .then(response => {
-        console.log(response.data.results)
-        })
-    .catch(error => {
-        console.error(error)
-        })
+    const [movies, setMovies] = useState([]);
+    const [totalPages, setTotalPages] = useState(1);
+    const [currentPage, setCurrentPage] = useState(1);
+    
     return (
-        <Welcom />
+        <div>
+            <Welcom setMovies={setMovies} setTotalPages={setTotalPages} />
+            <Cards 
+                movies={movies} 
+                totalPages={totalPages} 
+                setTotalPages={setTotalPages} 
+                setCurrentPage={setCurrentPage} 
+                currentPage={currentPage} 
+            />
+        </div>
     )
 }
