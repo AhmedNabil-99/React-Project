@@ -4,7 +4,6 @@ import "./welcom.css";
 
 export default function Welcom({ setMovies, setTotalPages }) {
   const [searchTerm, setSearchTerm] = useState("");
-  const [currentPage, setCurrentPage] = useState(1);
 
   useEffect(() => {
     const delayDebounceFn = setTimeout(() => {
@@ -15,7 +14,6 @@ export default function Welcom({ setMovies, setTotalPages }) {
               api_key: process.env.REACT_APP_TMDB_API_KEY || "d05c4cd1b7f5c2480d55c1a2931702d5",
               query: searchTerm,
               language: "en-US",
-              page: currentPage,
             },
           })
           .then((res) => {
@@ -29,14 +27,10 @@ export default function Welcom({ setMovies, setTotalPages }) {
         setMovies([]);
         setTotalPages(1); 
       }
-    }, 500);
+    }, 10);
 
     return () => clearTimeout(delayDebounceFn);
-  }, [searchTerm, currentPage, setMovies, setTotalPages]);
-
-  useEffect(() => {
-    setCurrentPage(1); 
-  }, [searchTerm]);
+  }, [searchTerm, setMovies, setTotalPages]);
 
   return (
     <div className="mx-5 px-5 py-5 mt-4" style={{ backgroundColor: "#F3F1F1" }}>
