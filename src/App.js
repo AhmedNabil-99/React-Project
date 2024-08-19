@@ -9,7 +9,6 @@ import Cards from './components/cards/cards';
 function App() {
   return (
       <div>
-        <Nav />
         <Router />
       </div>
   );
