@@ -13,10 +13,9 @@ export default function Nav() {
         <Link className="navbar-brand" style={{ fontSize: "15px", fontWeight: 700 }} to="/">Movie App</Link>
         <div className="navbar-nav align-items-center">
           <div className="d-flex align-items-center me-4">
-            <a className="navbar navbar-expand nav-link" style={{ fontSize: "15px", fontWeight: 700 }} onClick={toggleLanguage}>
+            <a className="navbar navbar-expand nav-link btn" style={{ fontSize: "15px", fontWeight: 700 }} onClick={toggleLanguage}>
               {language === 'en' ? 'En' : 'Ar'}
             </a>
-            <img src={arrow} alt="" />
           </div>
           <div className="d-flex align-items-center">
             <img src={vector} alt="" />
