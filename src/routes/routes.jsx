@@ -9,14 +9,14 @@ export default function Router() {
     const [favList, setFavList] = useState([])
 
     return (
-        <contextFavList.Provider value={{favList, setFavList}}>
             <BrowserRouter>
-                <Nav />        
-                <Routes>
-                    <Route path="/" element={<Home />}></Route>
-                    <Route path="/watchlist" element={<WatchList />}></Route>
-                </Routes>
+                <contextFavList.Provider value={{favList, setFavList}}>
+                    <Nav />        
+                    <Routes>
+                        <Route path="/" element={<Home />}></Route>
+                        <Route path="/watchlist" element={<WatchList />}></Route>
+                    </Routes>
+                </contextFavList.Provider>
             </ BrowserRouter>
-        </contextFavList.Provider>
     )
 }
