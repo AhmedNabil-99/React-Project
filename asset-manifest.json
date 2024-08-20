@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/AhmedNabil-99/React-Project/static/css/main.70e1900b.css",
-    "main.js": "/AhmedNabil-99/React-Project/static/js/main.1737c04d.js",
-    "static/js/453.7bf11acd.chunk.js": "/AhmedNabil-99/React-Project/static/js/453.7bf11acd.chunk.js",
-    "index.html": "/AhmedNabil-99/React-Project/index.html",
-    "main.70e1900b.css.map": "/AhmedNabil-99/React-Project/static/css/main.70e1900b.css.map",
-    "main.1737c04d.js.map": "/AhmedNabil-99/React-Project/static/js/main.1737c04d.js.map",
-    "453.7bf11acd.chunk.js.map": "/AhmedNabil-99/React-Project/static/js/453.7bf11acd.chunk.js.map"
+    "main.css": "/React-Project/static/css/main.70e1900b.css",
+    "main.js": "/React-Project/static/js/main.ec8af853.js",
+    "static/js/453.7bf11acd.chunk.js": "/React-Project/static/js/453.7bf11acd.chunk.js",
+    "index.html": "/React-Project/index.html",
+    "main.70e1900b.css.map": "/React-Project/static/css/main.70e1900b.css.map",
+    "main.ec8af853.js.map": "/React-Project/static/js/main.ec8af853.js.map",
+    "453.7bf11acd.chunk.js.map": "/React-Project/static/js/453.7bf11acd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.70e1900b.css",
-    "static/js/main.1737c04d.js"
+    "static/js/main.ec8af853.js"
   ]
 }
