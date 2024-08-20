@@ -14,7 +14,7 @@ export default function Nav() {
                     </div>
                     <div className="d-flex align-items-center">
                         <img src={vector} alt="" />
-                        <a className="nav-link" style={{ fontSize: "15px", fontWeight: 400 }} href="#">watchlist</a>
+                        <Link className="nav-link" style={{ fontSize: "15px", fontWeight: 400 }} to="/watchlist">watchlist</Link>
                     </div>
                 </div>
                 </div>

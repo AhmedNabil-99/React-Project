@@ -1,15 +1,22 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import heart from "../../icons/heart.png"
 import yellow_heart from "../../icons/yellow_heart.png"
+import contextFavList from "../../context/context";
 
 export default function Mcard({ movie }) {
 
   const [isAdded, setIsAdded] = useState(false);
+  const {favList, setFavList} = useContext(contextFavList)
 
-  function handelFavourit() {
-    setIsAdded(!isAdded);
+
+  function handelFavList() {
+    if (isAdded) {
+      setFavList(favList.filter(item => item.id !== movie.id));
+      } else { 
+        setFavList([...favList, movie]);
+        }
+        setIsAdded(!isAdded);
   }
-
   return (
     <div class="col">
     <div class="card mb-3 h-100" style={{boxShadow: "0 2px 8px rgba(0, 0, 0, .1)"}}>
@@ -18,7 +25,7 @@ export default function Mcard({ movie }) {
         <h5 class="card-title">{movie.title}</h5>
         <div className="d-flex align-items-center justify-content-between">
           <p class="card-text m-0" style={{color: "rgba(0, 0, 0, .6)"}}>{movie.release_date}</p>
-          <img src={isAdded ? yellow_heart : heart} alt="" onClick={handelFavourit} />
+          <img src={isAdded ? yellow_heart : heart} alt="" onClick={handelFavList} />
         </div>
         <div class="d-flex justify-content-center">
         </div>
